@@ -1,0 +1,50 @@
+for add label we need to do next (label for picture)
+1. add label on mainwindow.ui. after this we know label name
+2. add name of this label to:
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+
+in this construction we added listener of click mouse by label
+
+3. bool  MainWindow::eventFilter(QObject *obj, QEvent *event)
+in this file we need to add string of code where we getting name of pressed label
+
+4. ALL_LABEL_INFORMATION InitAllLabel ()
+in this function we need to add name of label
+
+
+5. HandlePressedLabel  in this function we neen to add name of label to construction if
+
+6. ClearAllCells in this function we need to add name of label
+
+7. according with type of labels we need to add function draw wtih label in file: 6_viewer_objects
+	name will be lile DrawLabel...
+
+7_viewer_draw_label_only
+in this file we need to add name label to refrest function
+and here we need to implement function like a:
+	void DrawLabel... (Ui::MainWindow* ui, LEFT_SIDE_NEW_LABEL left_side_new_label)
+
+******************************************************************************************************************
+
+for add button we need to do next
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+
+in this construction we added listener of click mouse by label
+
+3. bool  MainWindow::eventFilter(QObject *obj, QEvent *event)
+in this file we need to add string of code where we getting name of pressed label
+
+here we need to add name of label which will be like a button
+    if (pressed_label == "label_30" || pressed_label == "label_37" ||  pressed_label == "label_16")
+        all_label_information = HandlePressedButton (pressed_label, all_label_information);
+
+ALL_LABEL_INFORMATION HandlePressedButton (QString pressed_label, ALL_LABEL_INFORMATION all_label_information)
+in this function we need to add name of label for handle press to this button
+
+
